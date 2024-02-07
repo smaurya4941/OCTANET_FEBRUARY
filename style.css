@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+/* font-family: 'Poppins', sans-serif; */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    
+
+}
+
+.nav-list{
+    display: flex;  /* by default rowwise direction of child element*/
+    gap: 3.5rem;
+    justify-content: center;/* horizontal alignment of content*/
+    /* background-color: blueviolet; */
+    width:100% ;
+    height: 12vh;
+    align-items: center;
+    position: fixed;
+
+}
+.nav-list li{
+    list-style-type: none;  /*removing dots from list items */
+}
+
+.nav-list li a{
+    text-decoration: none; /*removing underline from anchor*/ /* */
+    text-transform: uppercase;
+    font-size: 1rem;
+    color:white;
+    position: relative;
+}
+
+.left-container, .right-container{  /* make similar property on multiple class by separating with comma*/
+
+    height:100vh ;
+    
+
+}
+
+.left-container{
+    background-color: #262525;
+    width: 71%;
+    padding-left: 3rem;
+    display: flex;
+    align-items: center;
+    
+
+}
+
+
+.right-container{
+    /* background-color: #3877FF; */
+    background: linear-gradient(-45deg,#3877FF,#262525 70%);
+    width: 29%;
+    
+
+}
+.icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+}
+.icons .fa-brands{
+    color: lightgray;
+    font-size: 1.8rem;
+    /* padding: 1rem 2rem; */
+}
+
+.content{
+    padding-left: 2rem;
+}
+
+.content h3{
+    font-size: 1.4vw;
+    color: white;
+}
+.content h3 span{
+    font-size: 1.4vw;
+    color: rgb(7, 179, 248);
+}
+
+.content h1{
+    font-size: 3vw;
+    color: rgb(7, 179, 248);
+}
+
+.content p{
+    font-size: 1rem;
+    color: white;
+    max-width: 30vw;
+    margin: 1.1rem 0 2.7rem 0;
+    line-height: 1.8;
+}
+
+
+.btn button{
+    border: 0.2rem solid #5DB9EE;
+    font-size: 1.1rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    color: #5DB9EE;
+    transition: 0.4s  ease;
+}
+
+.btn .first{
+    background-color: #5DB9EE;
+    color: #262525;
+}
+.btn .second{
+    background-color: transparent;
+    margin-left: 2rem;
+}
+
+.btn .first:hover{
+    background-color: transparent;
+    color: #5DB9EE;
+
+}
+
+.btn .second:hover{
+    background-color: #5DB9EE;
+    color: black;
+
+}
+
+
+.photo .circle{
+    aspect-ratio: 1;
+    position: absolute;
+    border-radius: 50%;
+    top: 52%;
+    left: 71%;
+    transform: translate(-50%,-50%);
+
+}
+
+.photo .outer{
+    background: linear-gradient(90deg, transparent 50%,#262525 40%);
+    width: 33vw;
+   
+}
+
+.photo .inner{
+    /* background-color: red; */
+    width: 28vw;
+    background-image: url("./profile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1.2rem solid white;
+    box-shadow: 0 0 1rem white,
+    inset 0 0 1rem white,
+    0 0 2rem #3877FF,
+    inset 0 0 2rem #3877FF,
+    0 0 3rem #3877FF,
+    inset 0 0 3rem #3877FF;
+
+  
+}
+.nav-list li a::after,.nav-list .home::after{
+    content: "";
+    position: absolute;
+    background: white;
+    width: 100%;
+    height: 0.1rem;
+    left: 0;
+    bottom: -0.3rem;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+
+}
+.nav-list li a:hover::after,.nav-list .home::after{
+    transform: scaleX(1);
+    
+}
+
+
+/* 768×1024 tablet
+414×896 mobile */
+
+@media (max-width: 700px){
+    .container{
+        min-height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        
+    
+    }
+
+    .photo .circle{
+        aspect-ratio: 1;
+        position: relative;
+        border-radius: 50%;
+        /* top: 52%;
+        left: 71%; */
+        transform: translate(-50%,-50%);
+    
+    }
+
+
+
+}
+
